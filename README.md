@@ -56,4 +56,12 @@ curl http://localhost:8000/v1/chat/completions \
     "max_tokens": 100
   }'
 ```
+### 5. Result
+<img width="1437" height="282" alt="first attempt via curl" src="https://github.com/user-attachments/assets/f1707567-1fe2-4811-adbd-1d65b44a60ce" />
+
+
 ## Jupyter Demo
+`jupyter lab --allow-root`
+
+<img width="979" height="201" alt="jupyter result" src="https://github.com/user-attachments/assets/ce571bd4-6dba-4219-a010-ff1c3d0057f7" />
+

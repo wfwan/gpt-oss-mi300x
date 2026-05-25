@@ -3,11 +3,11 @@ Deploy OpenAI's GPT-OSS 120B model on AMD MI300X using vLLM with AMD ROCm and AI
 
 ## Hardware
 - GPU: AMD Instinct MI300X
-- Platform: AMD Developer Cloud
+- Platform: [AMD Developer Cloud]([url](https://www.amd.com/en/developer/resources/cloud-access/amd-developer-cloud.html))
 <img width="1085" height="399" alt="Snipaste_2026-05-26_01-15-08" src="https://github.com/user-attachments/assets/ed8e2d3c-218b-4ecc-ac3e-eaaf5bbb8550" />
 
 ## Stack
-- ROCm (rocm/vllm-dev:open-mi300-08052025)
+- ROCm ([rocm/vllm-dev:open-mi300-08052025]([url](https://hub.docker.com/layers/rocm/vllm-dev/open-mi300-08052025/images/sha256-4bbe1ae90ca9f006975fd4236e99fd51d060f26dc8277072026652cc19b8b090)))
 - vLLM with AITer
 - OpenAI-compatible REST API
 

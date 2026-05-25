@@ -1,5 +1,5 @@
 # GPT-OSS 120B on AMD MI300X with vLLM
-Deploy OpenAI's GPT-OSS 120B model on AMD MI300X using vLLM with AMD ROCm and AITer
+This project documents the deployment of OpenAI's GPT-OSS 120B model on AMD Instinct MI300X (192GB HBM3) via AMD Developer Cloud. It uses vLLM as the inference engine with ROCm backend, achieving 9.7 tokens/s generation throughput on a 120B parameter model.
 
 ## Hardware
 - GPU: AMD Instinct MI300X

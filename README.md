@@ -60,12 +60,13 @@ curl http://localhost:8000/v1/chat/completions \
     "max_tokens": 100
   }'
 ```
-### 5. Result
-<img width="720" height="102" alt="result" src="https://github.com/user-attachments/assets/5fc2517e-c70b-4d31-ab1a-4ff1a445e0c6" />
+### 5. Benchmark Result (10 concurrent requests)
 
-|Avg prompt throughput|Avg generation throughput|
-|---------------------|-------------------------|
-|         9.0 tokens/s|      9.7 tokens/s       |
+| Metric  | GPT-OSS 120B | GPT-OSS 20B |
+|---------|--------------|-------------|
+|Mean TTFT|     128.97ms |    73.01ms (43% faster)|
+|Mean TPOT|     16.24ms  | 9.63ms     (41% faster)|
+|Mean ITL |    14.04ms   |   8.84ms   (37% faster)| 
 
 ## Jupyter Demo
 `jupyter lab --allow-root`

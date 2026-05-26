@@ -60,6 +60,9 @@ curl http://localhost:8000/v1/chat/completions \
     "max_tokens": 100
   }'
 ```
+<img width="1440" height="813" alt="python app in vllm" src="https://github.com/user-attachments/assets/d214200e-47c3-4bdc-b0f2-67ec97f3f165" />
+
+
 ### 5. Benchmark Result (10 concurrent requests)
 ```
 wget https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered/resolve/main/ShareGPT_V3_unfiltered_cleaned_split.json

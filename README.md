@@ -60,7 +60,7 @@ curl http://localhost:8000/v1/chat/completions \
     "max_tokens": 100
   }'
 ```
-<img width="1440" height="813" alt="python app in vllm" src="https://github.com/user-attachments/assets/d214200e-47c3-4bdc-b0f2-67ec97f3f165" />
+<img width="1437" height="282" alt="first attempt via curl" src="https://github.com/user-attachments/assets/5408751f-3651-4b42-b668-c7d21ce195e8" />
 
 
 ### 5. Benchmark Result (10 concurrent requests)
@@ -81,6 +81,9 @@ vllm bench serve --backend vllm \
 |Mean TTFT|     128.97ms | 73.01ms (43% faster)|
 |Mean TPOT|     16.24ms  | 9.63ms (41% faster)|
 |Mean ITL |    14.04ms   | 8.84ms (37% faster)| 
+
+- 20b: User waits 73ms before text starts, then gets new tokens every 9.6ms, very responsive
+- 120b: User waits 129ms before text starts, then gets new tokens every 16ms, still great for a 120b model
 
 ## Jupyter Demo
 `jupyter lab --allow-root`

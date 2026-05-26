@@ -38,7 +38,7 @@ export TP_SOCKET_IFNAME=lo
 ```
 ### 3. Start vLLM Server
 ```
-source /myhome/setup/env_vars.sh
+source /setup/env_vars.sh
 
 vllm serve openai/gpt-oss-120b \
   --compilation-config '{"full_cuda_graph": true}'

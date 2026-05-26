@@ -65,7 +65,12 @@ curl http://localhost:8000/v1/chat/completions \
 wget https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered/resolve/main/ShareGPT_V3_unfiltered_cleaned_split.json
 
 
-vllm bench serve --backend vllm --model openai/<gpt-oss-model> --endpoint /v1/completions --dataset-name sharegpt --dataset-path ShareGPT_V3_unfiltered_cleaned_split.json --num-prompts 10
+vllm bench serve --backend vllm \
+  --model openai/<gpt-oss-model> \
+  --endpoint /v1/completions \
+  --dataset-name sharegpt \
+  --dataset-path ShareGPT_V3_unfiltered_cleaned_split.json \
+  --num-prompts 10
 ```
 
 | Metric  | GPT-OSS 120B | GPT-OSS 20B |

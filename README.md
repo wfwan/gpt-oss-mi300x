@@ -61,12 +61,18 @@ curl http://localhost:8000/v1/chat/completions \
   }'
 ```
 ### 5. Benchmark Result (10 concurrent requests)
+```
+wget https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered/resolve/main/ShareGPT_V3_unfiltered_cleaned_split.json
+
+
+vllm bench serve --backend vllm --model openai/<gpt-oss-model> --endpoint /v1/completions --dataset-name sharegpt --dataset-path ShareGPT_V3_unfiltered_cleaned_split.json --num-prompts 10
+```
 
 | Metric  | GPT-OSS 120B | GPT-OSS 20B |
 |---------|--------------|-------------|
-|Mean TTFT|     128.97ms |    73.01ms (43% faster)|
-|Mean TPOT|     16.24ms  | 9.63ms     (41% faster)|
-|Mean ITL |    14.04ms   |   8.84ms   (37% faster)| 
+|Mean TTFT|     128.97ms | 73.01ms (43% faster)|
+|Mean TPOT|     16.24ms  | 9.63ms (41% faster)|
+|Mean ITL |    14.04ms   | 8.84ms (37% faster)| 
 
 ## Jupyter Demo
 `jupyter lab --allow-root`
